@@ -6,25 +6,25 @@ Ref 02 : docs.oracle.com
 
 
 
-/etc/defaultrouter 							Defines the systems default routers. Values must be separated with whitespace, # can be used for comments.
+/etc/defaultrouter 			Defines the systems default routers. Values must be separated with whitespace, # can be used for comments.
 
-/etc/hostname.interface					Contains the hostname of the system and should match the hostname defined in the /etc/hosts file. The file isnamed with the interface name, such as hostname.hme0 or 
-											          hostname.le0
+/etc/hostname.interface			Contains the hostname of the system and should match the hostname defined in the /etc/hosts file. The file isnamed with the interface name, such as hostname.hme0 or 
+					hostname.le0
 
-/etc/hostsConfigures 						names and aliases of IP-addresses. Fields should be separated with Tab or white space.
+/etc/hostsConfigures 			names and aliases of IP-addresses. Fields should be separated with Tab or white space.
 
-/etc/inetd.conf 							  Is the Internet server database, used by the inetd daemon, which contains a list of available network services.
+/etc/inetd.conf 			Is the Internet server database, used by the inetd daemon, which contains a list of available network services.
 
-/etc/inittab								    Is a script used by init. Controls process dispatching.
+/etc/inittab				Is a script used by init. Controls process dispatching.
 
-/etc/nodename								    Specifies the real hostname for the system.
+/etc/nodename				Specifies the real hostname for the system.
 
-/etc/nologin								    Is a text file message that is shown to the user who tries to log on during a system shutdown process. After themessage appears the log on procedure ends.
+/etc/nologin				Is a text file message that is shown to the user who tries to log on during a system shutdown process. After themessage appears the log on procedure ends.
 
-/etc/nsswitch.conf 							Specifies how the lookup for different databases is done and in what order.
+/etc/nsswitch.conf 			Specifies how the lookup for different databases is done and in what order.
 
-/etc/resolv.conf 							  Configures DNS name servers to use for hostname lookups.
+/etc/resolv.conf 			Configures DNS name servers to use for hostname lookups.
 
-a2p											        Transforms awk scripts to perl scripts, and shows the result on STDOUT.
+a2p					Transforms awk scripts to perl scripts, and shows the result on STDOUT.
 
-ab 											        Benchmarks your Apache server by sending requests to it.
+ab 					Benchmarks your Apache server by sending requests to it.
