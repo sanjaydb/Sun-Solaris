@@ -28,3 +28,28 @@ Ref 02 : docs.oracle.com
 a2p					Transforms awk scripts to perl scripts, and shows the result on STDOUT.
 
 ab 					Benchmarks your Apache server by sending requests to it.
+ 
+ab_admin				Manages an AnswerBook card catalog database through a shell-level interface. Will enable administrators todelete, add, list, verify and modify AnswerBook entries.
+
+accept					Enables the printer queue specified to receive print requests.
+
+accessx					Configures the keyboard for use by people with disabilities. Requires OpenWindows version 3.4 or later.
+
+acctcms					Reads one or more files, adds the records for processes that execute commands that have the same name ,and then shows a summary.
+
+acctcom					Reads files, STDIN, or /var/adm/pacct, and searches the files for account information. Shows the information asdescribed by acct to STDOUT.
+
+acctcon1				Reads login/logoff records from STDIN and converts them to total accounting records.
+
+acctcon1 				Converts login/logoff records into ASCII. It reads from STDIN or the wtmp file in /var/adm/.
+
+acctcon2 				Reads the ASCII records created by acctcon1 and converts them into total accounting (tacct) records.
+
+acctdisk 				Converts information regarding transferred disk blocks by userID or login name by reading the accounting file(usually /var/adm/pacct) and then creates total accounting records.
+
+acctdusg 				Calculates disk resource consumption for users. Reads from STDIN.
+
+acctmerg 				Merges or adds accounting files in the total accounting (tacct) or ASCII format.
+
+accton 					Outputs process accounting to the specified file. If no file name is given, will turns process accounting off.
+
