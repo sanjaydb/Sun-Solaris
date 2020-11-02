@@ -1,0 +1,44 @@
+Updating Sun
+------------
+{
+  # pkg update
+  
+  
+  Display those packages on a system that require an update without actually installing the packages.
+  # pkg update -nv --accept
+
+  Install an individual package as follows:
+  # pkg install communication/im/pidgin
+
+  Update an individual package as follows:
+  # pkg update system/management/ocm
+
+}
+
+
+How to Configure the Oracle Solaris support Repository
+{
+  Log into the following site.
+  http://pkg-register.oracle.com/
+
+  Download the SSL key and certificate for the Oracle Solaris 11 release.
+  Consider creating a directory inside /var/pkg to store the key and certificate.
+  # mkdir -m 0755 -p /var/pkg/ssl
+  # cp -i Oracle_Solaris_11_Support.key.pem /var/pkg/ssl
+  # cp -i Oracle_Solaris_11_Support.certificate.pem /var/pkg/ssl
+
+  Copy the key and certificate from the directory that you downloaded the key and certificate into this directory.
+  The key files are kept by reference, so if the files become inaccessible to the packaging system, you will encounter errors.
+
+  Set the publisher to the support repository.
+  # pkg set-publisher \
+            -k /var/pkg/ssl/Oracle_Solaris_11_Support.key.pem \
+            -c /var/pkg/ssl/Oracle_Solaris_11_Support.certificate.pem \
+            -O https://pkg.oracle.com/solaris/support solaris
+
+  Install the updated packages from the support repository, if desired.
+  # pkg update
+
+
+
+}
