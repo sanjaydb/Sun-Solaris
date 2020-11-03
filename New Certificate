@@ -1,0 +1,9 @@
+
+$ pktool gencert label=sanjayCA subject="CN=sanjaytest" serial=0x01
+$ pktool signcsr signkey=sanjayCA csr=sanjay.csr serial=0x02 outcert=server.crt issuer="CN=sanjaytest"
+$ pktool export objtype=key label=sanjay outformat=pem outfile=server.key
+$ pktool export label=sanjayCA objtype=cert outformat=pem outfile=sun_server_ca.pem
+$ cp sun_server_ca.pem /etc/certs/CA/
+$ svcadm refresh ca-certificates
+$ ls -l /etc/openssl/certs | grep sun_server_ca.pem
+
