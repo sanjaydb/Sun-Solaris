@@ -1,0 +1,44 @@
+The safest approach is to order an extra disk. Since virtually all production systems mirror their disks,
+this means ordering 3 disks. One disk is for the root (/) file system, a second is for the mirror of the
+root file system, and the third is for Oracle Solaris Live Upgrade
+
+# lucreate --> to create the copy
+# luupgrade -->  to upgrade the OS on the copy
+# luactivate -->  to choose the environment to boot
+
+
+# cd /var/tmp/lupatches
+ Then add each patch individually:
+# patchadd <patch_id>
+# init 6
+ 
+ Incase of CD-rom
+ ----------------
+sparc
+# cd /cdrom/cdrom0/s0/Solaris_10/Tools/Installers
+# ./liveupgrade20 -noconsole -nodisplay
+ 
+x86
+# cd /cdrom/cdrom0/Solaris_10/Tools/Installers
+# ./liveupgrade20 -noconsole -nodisplay
+
+# lucreate -c s10Mar05 -n s10Jan06 -m /:c0t1d0s0:ufs
+ 
+<sparc> # luupgrade -u -n s10Jan06 -s /cdrom/cdrom0/s0
+<x86> # luupgrade -u -n s10Jan06 -s /cdrom/cdrom0
+
+# luactivate s10Jan06
+ # init 6
+ 
+ 
+ 
+: Patching a System Using Oracle Solaris Live Upgrade 
+------------------------------------------------------
+10. # cd /var/tmp/10_Recommended 
+# luupgrade -n s10Jan06 -s /var/tmp/10_Recommended -t `cat patch_order`
+Note the argument to the -t option is placed in backquotes meaning the expression
+will be evaluated by the shell before sending the results (the list of patches) to the luupgrade
+command. 
+
+
+
