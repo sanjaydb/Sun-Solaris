@@ -1,0 +1,22 @@
+Error: 
+------
+{
+  root@San:~# pkg verify
+  
+  PACKAGE                                                                 STATUS
+  pkg://solaris/system/device-administration                               ERROR
+          file: etc/devlink.tab
+                  ERROR: Group: 'other (1)' should be 'sys (3)'
+  pkg://solaris/system/file-system/smb                                     ERROR
+          file: var/smb/smbfspasswd
+                  ERROR: Group: 'root (0)' should be 'sys (3)'
+}
+
+
+solution:
+---------
+{
+  root@San:~# chgrp sys /etc/devlink.tab
+  root@San:~# chgrp sys /var/smb/smbfspasswd
+}
+
