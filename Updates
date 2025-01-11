@@ -42,3 +42,44 @@ How to Configure the Oracle Solaris support Repository
 
 
 }
+
+Updates :
+---------
+# pkg refresh
+# pkg update -n
+# pkg update
+
+// verify that all packages are updated correctly
+# pkg list -uv
+
+//Ensure that all packages are correctly installed and not corrupted:
+# pkg verify
+
+Check if everting is going Good 
+--------------------------------
+
+//Ensure all necessary services are running
+# svcs -xv
+
+//Check the system logs for any errors or warning messages that might indicate problems:
+# tail -f /var/adm/messages
+
+//Check CPU and Memory:
+top
+prstat
+
+//disk usage
+# df -h
+
+Security Check 
+---------------
+//Regularly check for and install security updates to keep your system protected:
+# pkg update -n
+
+Check the health of your physical hardware periodically, especially if you suspect any issues:
+----------------------------------------------------------------------------------------------
+
+//Disk Health
+# iostat -En
+
+
